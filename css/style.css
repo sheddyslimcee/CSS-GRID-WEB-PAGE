@@ -1,0 +1,296 @@
+body{
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:lightblue;
+    color: #333;
+   
+}
+
+
+.container{
+    max-width: 1250px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas: 
+    "main-showcase main-showcase"
+    "image-showcase image-showcase";
+    }
+
+@media screen and (min-width:870px){
+.container{
+    max-width: 1250px;
+    margin:auto;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas: 
+    "main-showcase image-showcase";
+    }
+}
+
+.container > *{
+    background: #cfeded;
+    padding: 30px;
+    
+}
+
+button {
+    padding: 12px;
+    border: none;
+    color: #fff;
+    border-radius: 50px;
+    background-color: #1978a9;
+    font-weight: bold;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+
+  .fa{
+      font-size: 20px;
+  }
+  
+  button:hover {
+    background-color: #043c74;
+    color: #fff;
+  }
+
+  button:focus{
+      display: none;
+  }
+
+
+
+.mainShowcase{
+    grid-area: main-showcase;
+    border: none;
+    background-color:#f3edee;
+    /* border-radius: 30px;
+    box-shadow:  0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.25); */
+ 
+
+}
+
+.mainShowcase .header{
+    display: flex;
+}
+
+.header h3{
+ flex: 2;
+}
+
+.header ul{
+    flex: 1;
+    padding: 0px;
+}
+
+.header a{
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 50px;
+    border: none;
+    color: #fff;
+    background-color: #1978a9;
+    -webkit-transition: all .5s;
+    transition: all .5s; 
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.header a:hover{
+    background-color: #043c74;
+    color: #fff;
+}
+
+
+.header li{
+    list-style: none;
+    display: block;
+    padding-right: 5px;
+}
+
+@media screen and (min-width:1195px){
+    .header a{
+        display: inline-block;
+    }
+    .header li{
+        display: inline;
+    }
+}
+
+ @media screen and (min-width:330px){
+
+    .header ul{
+        align-self: flex-start;
+    }
+} 
+
+.main p{
+    font-size: 12px;
+}
+
+.main h3{
+    font-size: 30px;
+    
+}
+
+
+.mainShowcase .footer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer #contact{
+    flex: 1
+}
+
+footer #social{
+    flex: 1;
+}
+
+.footer #hire{
+    flex: 1;
+}
+
+.footer .mybox{
+    width: 30%;
+}
+
+
+.imageShowcase{
+    grid-area: image-showcase;
+}
+
+.imageShowcase{
+    background-image: url(../images/sheddy.jpeg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-size: cover;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+.imageShowcase .overlay{
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    background: rgba(108, 135, 138, 0.4);
+    
+}
+
+.imageShowcase h4{
+    font-size: 20px;
+}
+
+.imageShowcase p{
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.imageShowcase a{
+    padding: 7px;
+    border: none;
+    color: #fff;
+    border-radius: 50px;
+    background-color: #1978a9;
+    /* font-weight: bold; */
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.imageShowcase a:hover{
+    background-color: #043c74;
+    color: #fff;
+}
+
+.imageShowcase .box-1{
+    padding: 10px;
+   
+}
+
+.imageShowcase .projects{
+    /* border: 1px solid #333; */
+    padding: 10px;
+    width: 100% ;
+    height: auto;
+}
+
+.imageShowcase .Education{
+    /* border: 1px solid #333; */
+    padding: 10px;
+    width: 100%;
+    height: auto;
+}
+
+@media(min-width:870px){
+.imageShowcase .box-1{
+    display: flex;
+    /* border: 1px solid #333; */
+    justify-content: space-between;
+ }  
+
+ .imageShowcase .projects{
+     width: 45%;
+ }
+
+ .imageShowcase .Education{
+     width: 45%;
+ }
+}
+
+
+.imageShowcase .box-2{
+    padding: 10px;
+    
+}
+
+.imageShowcase .podcast{
+    /* border: 1px solid #333; */
+    padding: 10px;
+    width: 100;
+    height: auto;  
+}
+
+.imageShowcase .why{
+    /* border: 1px solid #333; */
+    padding: 10px;
+    width: 100%;
+    height: auto;
+}
+
+
+@media(min-width:870px){
+.imageShowcase .box-2{
+    display: flex;
+    padding: 10px;
+    /* border: 1px solid #333; */
+    justify-content: space-between;
+ }  
+ 
+ .imageShowcase .podcast{
+    width: 45%;
+}
+
+.imageShowcase .why{
+    width: 45%;
+}
+
+}
+
+.imageShowcase .main-footer p{
+    margin: 0;
+    padding: 3px;
+    text-align: center;
+}
+
+
